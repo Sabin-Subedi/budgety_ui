@@ -9,7 +9,7 @@ export function HomeScreen() {
   })
 
   return (
-    <YStack f={1} jc="center" ai="center" p="$4" space>
+    <YStack f={1} p="$4" space>
       <YStack space="$4" maw={600}>
         <H1 ta="center">Welcome to Tamagui.</H1>
       </YStack>

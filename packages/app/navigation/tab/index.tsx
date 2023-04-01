@@ -1,11 +1,10 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import HomeScreen from '../../../../apps/next/pages'
-import { Home, Siren, Wallet, BarChart, User } from '@tamagui/lucide-icons'
-import WalletScreen from 'app/features/wallet/wallet-screen'
+import { BarChart, Home, Siren, User, Wallet } from '@tamagui/lucide-icons'
 import StatScreen from 'app/features/stats/stats-screen'
 import UserScreen from 'app/features/user/user-screen'
-import { SafeAreaView, View } from 'react-native'
 import React from 'react'
+import { SafeAreaView } from 'react-native'
+import HomeScreen from '../../../../apps/next/pages'
 
 const tabScreens = [
   {
@@ -34,7 +33,11 @@ const Tabs = createBottomTabNavigator()
 
 const WithSafeArea = (Component: any) => {
   return function WithSafeView(props) {
-    return <Component {...props} />
+    return (
+      <SafeAreaView>
+        <Component {...props} />
+      </SafeAreaView>
+    )
   }
 }
 
