@@ -9,7 +9,13 @@ export function HomeScreen() {
   })
 
   return (
-    <YStack f={1} p="$4" space>
+    <YStack
+      // p="$4"
+      // jc="center"
+      style={{
+        height: '100%',
+      }}
+    >
       <YStack space="$4" maw={600}>
         <H1 ta="center">Welcome to Tamagui.</H1>
       </YStack>
