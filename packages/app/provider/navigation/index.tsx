@@ -7,7 +7,14 @@ export function NavigationProvider({ children }: { children: React.ReactNode }) 
   const scheme = useColorScheme()
   return (
     <NavigationContainer
-      theme={scheme === 'dark' ? DarkTheme : DefaultTheme}
+      theme={{
+        ...DefaultTheme,
+        colors: {
+          ...DefaultTheme.colors,
+          background: '#f3f3f3',
+          border: '#f3f3f3',
+        },
+      }}
       linking={useMemo(
         () => ({
           prefixes: [Linking.createURL('/')],
